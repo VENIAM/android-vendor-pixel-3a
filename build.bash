@@ -30,6 +30,12 @@ kernel_build() {
 
     repo sync
 
+    cd private/msm-google
+
+    patch -p1 < ../../../r8152-for-4.9.patch
+
+    cd -
+
     cp ../bonito_defconfig 'private/msm-google/arch/arm64/configs/bonito_defconfig'
 
     ./build/build.sh
