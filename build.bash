@@ -25,8 +25,8 @@ kernel_build() {
     cd kernel
 
     repo init \
-         -u https://android.googlesource.com/kernel/manifest \
-         -b android-msm-bonito-4.9-pie-b4s4
+        -u https://android.googlesource.com/kernel/manifest \
+        -b android-msm-bonito-4.9-pie-b4s4 --depth=1
 
     repo sync -qc -j$(nproc)
 
